@@ -24,6 +24,10 @@ const server = http.createServer(app);
 
 socketServer.registerSocketServer(server);
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -35,3 +39,4 @@ mongoose
     console.log('database connection failed. Server not started');
     console.error(err);
   });
+

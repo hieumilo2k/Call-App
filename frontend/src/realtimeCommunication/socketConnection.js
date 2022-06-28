@@ -14,7 +14,8 @@ let socket = null;
 export const connectWithSocketServer = (userDetails) => {
   const jwtToken = userDetails.token;
 
-  socket = io('http://localhost:5000', {
+  // socket = io('http://localhost:5000', {
+  socket = io('https://hieu-canh-nhatnganh-group5.herokuapp.com', {
     auth: {
       token: jwtToken,
     },

@@ -2,7 +2,8 @@ import axios from 'axios';
 import { logout } from './shared/utils/auth';
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  // baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://hieu-canh-nhatnganh-group5.herokuapp.com/api',
   timeout: 1000,
 });
 
